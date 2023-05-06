@@ -3,8 +3,8 @@
 STEPS:
 
 1. Import the package
-2. Register the drivers
-3. Connect with database
+2. Register (load) the drivers
+3. Connect with database : url, user and password
 4. Statement :
     Types:  1. Statement
             2. PreparedStatement (extends Statement)
