@@ -14,9 +14,12 @@ public class JDBCexample {
             // statement object will be used to run queries
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("select * from students");
+            // retrieve the result
             while (rs.next()) {
                 System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getString(3) + " " + rs.getInt(4));
             }
+            // connection close
+            con.close();
         }
         catch(Exception e){
             System.out.println(e);
