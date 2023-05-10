@@ -2,11 +2,11 @@
 package com.company.javaJDBC;
 import java.sql.*;
 
-public class JDBCexample {
+public class ReadOperation {
     public static void main(String args[]) throws SQLException{
         try{
             // load or register drivers
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver"); // com.mysql.jdbc.Driver is deprecated
             // connecting to a database
             // here demo is database name, root is username and root is password
             Connection con =  DriverManager.getConnection("jdbc:mysql://localhost:3306/demo","root","root");
