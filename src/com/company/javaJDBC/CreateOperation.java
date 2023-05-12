@@ -1,11 +1,12 @@
 package com.company.javaJDBC;
 import java.sql.*;
 
-public class CreateOperationJDBC {
+public class CreateOperation {
     public static void main(String args[]) throws SQLException{
         try{
-            // Create a new connection
+            // load the driver
             Class.forName("com.mysql.cj.jdbc.Driver");
+            // Create a new connection
             Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/demo","root","root");
 
             // creating a user defined function for create operation
