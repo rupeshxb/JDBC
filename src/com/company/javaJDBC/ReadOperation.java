@@ -9,14 +9,16 @@ public class ReadOperation {
             Class.forName("com.mysql.cj.jdbc.Driver"); // com.mysql.jdbc.Driver is deprecated
             // connecting to a database
             // here demo is database name, root is username and root is password
-            Connection con =  DriverManager.getConnection("jdbc:mysql://localhost:3306/demo","root","root");
+            Connection con =  DriverManager.getConnection("jdbc:mysql://localhost:3306/demo",
+                    "root","root");
             // creating a statement object
             // it will be used to run queries
             Statement stmt = con.createStatement();
             // retrieve the result from the query
             ResultSet rs = stmt.executeQuery("select * from students");
             while (rs.next()) {
-                System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getString(3) + " " + rs.getInt(4));
+                System.out.println(rs.getInt(1) + " " + rs.getString(2)
+                        + " " + rs.getString(3) + " " + rs.getInt(4));
             }
             // connection close
             con.close();

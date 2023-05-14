@@ -5,8 +5,8 @@ public class UpdateOperation {
     public static void main(String args[]) throws SQLException{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection newConnection = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo","root","root");
-
+            Connection newConnection = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo",
+                    "root","root");
             int updated_roll_no = 7;
             String first_name = "Che";
             String updated_last_name = "BinLaden";
@@ -19,7 +19,8 @@ public class UpdateOperation {
         }
     }
 
-    public static void updateStudent(Connection newConnection,int roll_no, String first_name, String last_name,int age) throws SQLException {
+    public static void updateStudent(Connection newConnection,int roll_no,
+                                     String first_name, String last_name,int age) throws SQLException {
         String sql_query = "Update students SET roll_no=?, last_name=?,age=? where first_name= ?";
         PreparedStatement Statement = newConnection.prepareStatement(sql_query);
         // Parameter Index must match to parameters of query not to database

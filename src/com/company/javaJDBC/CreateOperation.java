@@ -7,7 +7,8 @@ public class CreateOperation {
             // load the driver
             Class.forName("com.mysql.cj.jdbc.Driver");
             // Create a new connection
-            Connection newConnection=DriverManager.getConnection("jdbc:mysql://localhost:3306/demo","root","root");
+            Connection newConnection=DriverManager.getConnection("jdbc:mysql://localhost:3306/demo",
+                    "root","root");
 
             // creating a user defined function for create operation
             int roll_no = 6;
@@ -25,7 +26,8 @@ public class CreateOperation {
     }
 
     // method definition
-    public static void createNewStudent(Connection newConnection, int roll_no, String first_name, String last_name, int age) throws SQLException{
+    public static void createNewStudent(Connection newConnection, int roll_no, String first_name,
+                                        String last_name, int age) throws SQLException{
         String sql_query = "INSERT INTO students(roll_no,first_name,last_name,age) values (?,?,?,?)";
         PreparedStatement statement = newConnection.prepareStatement(sql_query);
         statement.setInt(1,roll_no);

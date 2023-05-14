@@ -1,5 +1,4 @@
 package com.company.javaJDBC;
-import java.rmi.server.ExportException;
 import java.sql.*;
 
 public class DeleteOperation {
