@@ -1,4 +1,6 @@
-// DAO stands for Database Access Object. It interacts with database. It is a design pattern.
+// DAO stands for Database Access Object. It interacts with database.
+// It is a part of commonly used design pattern.
+// This class 'StudentDAO' is both business layer and data-acess layer in the design pattern.
 
 package com.company.JDBCwithConsole;
 

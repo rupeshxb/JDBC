@@ -1,3 +1,5 @@
+// This is the presentation layer responsible for input and output using the console.
+
 package com.company.JDBCwithConsole;
 
 import java.sql.SQLException;
